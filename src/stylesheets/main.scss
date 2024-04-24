@@ -1,1 +1,91 @@
-// Your styles go here
+@import "@fortawesome/fontawesome-free/css/all.css";
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+/* This is where I can overide any variables like. Needs to be done before @import bootstrap 
+
+*/
+// $primary: red;
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here
+@import "myVariables";
+body {
+  scroll-behavior: smooth;
+  background-color: $body-bg-color;
+}
+
+//MY_CLASSES
+.my-gradient {
+  padding: 1em 2em;
+  background-image: linear-gradient(40deg, $jumbo-base 0% 8%, $body-bg-color 8% 25%, $jumbo-base 25%, ivory);
+}
+
+.myborder1 {
+  border: 3px solid red;
+}
+.my-bg-color {
+  background-color: $body-bg-color;
+}
+.text-bg-primary {
+  background-color: $jumbo-base;
+}
+
+/* this is the size of each gallery box */
+.galbox-size {
+  min-width: 100%;
+  height: 200px;
+  width: 100%;
+}
+.card:has(.square) {
+  border: 0;
+}
+.pic-height {
+  height: 100%;
+  // padding: 0 0.5rem;
+  margin: 0;
+}
+.middle-pic-height {
+  height: calc(300px - 0.2rem);
+}
+.cata {
+  // border: 3px solid green;
+  margin: 0;
+  padding: 0;
+}
+.gal-wrap {
+  min-width: 970px;
+  // border: 3px solid green;
+  margin-inline: auto;
+}
+.square {
+  background-color: $jumbo-base;
+  width: 5rem;
+  height: 5rem;
+  margin-left: -10px;
+  display: block;
+}
+.pull-left {
+  margin-left: -80px;
+}
+.btn-primary {
+  background-color: $primary-color;
+}
+aria-hidden {
+  img {
+    height: 205px;
+  }
+}
+table {
+  tr:last-of-type {
+    border-bottom: 3px solid black;
+  }
+}
+footer {
+  h5 {
+    color: white;
+  }
+  i {
+    color: white;
+  }
+}
